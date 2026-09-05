@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cuenta confirmada · TranslationLove</title>
+<style>
+  :root{
+    --papel:#FAFAFC; --tinta:#171A22; --suave:#5F6472;
+    --rosa:#A83E64; --azul:#2C5C8A; --lavanda:#5B4189; --lavandaSuave:#DED2F0;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --papel:#101218; --tinta:#EDEFF5; --suave:#9AA1B2;
+           --rosa:#F2A6C0; --azul:#9BC6EA; --lavanda:#BCA7EA; --lavandaSuave:#2B2242; }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; min-height:100vh; background:var(--papel); color:var(--tinta);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    display:flex; align-items:center; justify-content:center; padding:24px;
+    text-align:center; line-height:1.6;
+  }
+  .caja{max-width:420px; display:flex; flex-direction:column; align-items:center; gap:20px}
+  .ondas{display:flex; align-items:center; gap:5px; height:56px}
+  .ondas span{width:7px; border-radius:4px; display:block; animation:latir 1.1s ease-in-out infinite}
+  @keyframes latir{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.5)}}
+  @media (prefers-reduced-motion: reduce){ .ondas span{animation:none} }
+  h1{font-size:26px; margin:0; letter-spacing:-.4px}
+  p{margin:0; color:var(--suave); font-size:17px}
+  .marca{font-size:13px; letter-spacing:2px; text-transform:uppercase;
+         color:var(--lavanda); font-weight:700}
+  .listo{
+    background:var(--lavandaSuave); color:var(--lavanda); font-weight:700;
+    border-radius:100px; padding:10px 22px; font-size:15px;
+  }
+</style>
+</head>
+<body>
+  <main class="caja">
+    <!-- El logotipo: siete barras. Las de la izquierda rosas, las de la
+         derecha azules, y la del centro lavanda: el punto de encuentro. -->
+    <div class="ondas" role="img" aria-label="Logotipo de TranslationLove">
+      <span style="height:17px;background:var(--rosa);animation-delay:0s"></span>
+      <span style="height:31px;background:var(--rosa);animation-delay:.08s"></span>
+      <span style="height:44px;background:var(--rosa);animation-delay:.16s"></span>
+      <span style="height:52px;background:var(--lavanda);animation-delay:.24s"></span>
+      <span style="height:44px;background:var(--azul);animation-delay:.32s"></span>
+      <span style="height:31px;background:var(--azul);animation-delay:.4s"></span>
+      <span style="height:17px;background:var(--azul);animation-delay:.48s"></span>
+    </div>
+
+    <p class="marca">TranslationLove</p>
+
+    <div class="listo">✓ Cuenta confirmada</div>
+
+    <h1>¡Listo! Ya puedes entrar</h1>
+
+    <p>
+      Tu correo quedó confirmado. <strong>Vuelve a la app</strong> y toca el
+      botón que dice <strong>“Ya toqué el enlace, entrar”</strong>.
+    </p>
+
+    <p style="font-size:15px">
+      Puedes cerrar esta pestaña.
+    </p>
+  </main>
+</body>
+</html>
