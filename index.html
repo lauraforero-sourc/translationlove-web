@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Cuenta confirmada · TranslationLove</title>
+<title>Cuenta confirmada · BaeBae</title>
 <style>
   :root{
     --papel:#FAFAFC; --tinta:#171A22; --suave:#5F6472;
@@ -14,6 +14,7 @@
            --rosa:#F2A6C0; --azul:#9BC6EA; --lavanda:#BCA7EA; --lavandaSuave:#2B2242; }
   }
   *{box-sizing:border-box}
+  [hidden]{display:none!important}
   body{
     margin:0; min-height:100vh; background:var(--papel); color:var(--tinta);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
@@ -39,7 +40,7 @@
   <main class="caja">
     <!-- El logotipo: siete barras. Las de la izquierda rosas, las de la
          derecha azules, y la del centro lavanda: el punto de encuentro. -->
-    <div class="ondas" role="img" aria-label="Logotipo de TranslationLove">
+    <div class="ondas" role="img" aria-label="Logotipo de BaeBae">
       <span style="height:17px;background:var(--rosa);animation-delay:0s"></span>
       <span style="height:31px;background:var(--rosa);animation-delay:.08s"></span>
       <span style="height:44px;background:var(--rosa);animation-delay:.16s"></span>
@@ -49,7 +50,7 @@
       <span style="height:17px;background:var(--azul);animation-delay:.48s"></span>
     </div>
 
-    <p class="marca">TranslationLove</p>
+    <p class="marca">BaeBae</p>
 
     <div class="listo">✓ Cuenta confirmada</div>
 
@@ -64,5 +65,50 @@
       Puedes cerrar esta pestaña.
     </p>
   </main>
+
+  <!-- Abrir en BaeBae (14 oct 2026): el QR de un perfil (?u=usuario) y el
+       enlace de una llamada (?sala=abc-defg-hij) traen aquí a quien los
+       abre con la cámara o el navegador del teléfono. El botón abre la
+       app con baebae://agregar?u=… o baebae://sala?codigo=… -->
+  <main class="caja" id="abrir" hidden>
+    <p class="marca">BaeBae</p>
+    <h1 id="abrir-titulo"></h1>
+    <p id="abrir-texto"></p>
+    <a id="abrir-boton" class="listo" style="text-decoration:none" href="#"></a>
+    <p id="abrir-nota" style="font-size:15px"></p>
+  </main>
+  <script>
+  (function () {
+    var datos = new URLSearchParams(location.search);
+    var usuario = (datos.get('u') || '').trim().replace(/^@/, '').toLowerCase();
+    var sala = (datos.get('sala') || '').trim().toLowerCase();
+    var destino = null;
+    if (/^[a-z]{3}-[a-z]{4}-[a-z]{3}$/.test(sala)) destino = 'baebae://sala?codigo=' + encodeURIComponent(sala);
+    else if (/^[a-z0-9_.]{2,30}$/.test(usuario)) destino = 'baebae://agregar?u=' + encodeURIComponent(usuario);
+    if (!destino) return;
+    var es = /^es/i.test(navigator.language || '');
+    var t = es ? {
+      titulo: sala ? 'Te invitaron a una llamada' : 'Habla con @' + usuario,
+      texto: 'BaeBae traduce la llamada y el chat para que cada quien hable en su idioma.',
+      boton: 'Abrir en BaeBae',
+      nota: '¿Aún no tienes BaeBae? Está en pruebas: pide tu invitación a quien te mandó este enlace.'
+    } : {
+      titulo: sala ? 'You are invited to a call' : 'Talk with @' + usuario,
+      texto: 'BaeBae translates the call and the chat so each of you speaks your own language.',
+      boton: 'Open in BaeBae',
+      nota: "Don't have BaeBae yet? It is in testing: ask the person who sent you this link for an invitation."
+    };
+    document.documentElement.lang = es ? 'es' : 'en';
+    document.title = 'BaeBae';
+    document.querySelector('main.caja').hidden = true;
+    document.getElementById('abrir').hidden = false;
+    document.getElementById('abrir-titulo').textContent = t.titulo;
+    document.getElementById('abrir-texto').textContent = t.texto;
+    document.getElementById('abrir-nota').textContent = t.nota;
+    var boton = document.getElementById('abrir-boton');
+    boton.textContent = t.boton;
+    boton.href = destino;
+  })();
+  </script>
 </body>
 </html>
