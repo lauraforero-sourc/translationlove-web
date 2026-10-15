@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Política de privacidad · BaeBae</title>
+<style>
+:root { --bg:#F7F3FB; --card:#FFFFFF; --ink:#1D1430; --muted:#5E5470; --line:#DDD2EC; --accent:#7C3AED; --rose:#C0267A; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0B0816; --card:#120E21; --ink:#F3EEFF; --muted:#B4A9CC; --line:#2A2240; --accent:#C084FC; --rose:#F472B6; color-scheme: dark; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; line-height:1.6; }
+main { max-width:760px; margin:0 auto; padding:32px 20px 64px; display:grid; gap:18px; }
+.marca { font-weight:800; letter-spacing:.14em; text-transform:uppercase; font-size:13px; color:var(--accent); }
+h1 { margin:0; font-size:30px; line-height:1.2; letter-spacing:-.02em; }
+h2 { margin:0 0 6px; font-size:18px; }
+p { margin:0 0 8px; color:var(--muted); }
+section { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; }
+.lead { color:var(--ink); font-size:17px; }
+nav a { color:var(--accent); margin-right:14px; font-weight:600; }
+label { display:block; font-weight:700; margin-bottom:6px; }
+input { width:100%; padding:12px 14px; border-radius:12px; border:1.5px solid var(--line); background:var(--bg); color:var(--ink); font-size:16px; }
+button { margin-top:12px; width:100%; min-height:48px; border:0; border-radius:999px; background:var(--accent); color:#fff; font-weight:800; font-size:16px; cursor:pointer; }
+.aviso { padding:12px 14px; border-radius:12px; background:var(--line); color:var(--ink); }
+</style>
+</head>
+<body>
+<main>
+<div class="marca">BaeBae</div>
+<h1>Política de privacidad</h1>
+<nav><a href="privacy.html">Read in English</a></nav>
+<p class="lead">BaeBae es una app de mensajes y videollamadas que traduce para que dos personas se entiendan aunque no hablen el mismo idioma. Aquí te contamos qué datos usamos, para qué y con quién, sin letra pequeña.</p>
+<section><h2>Quiénes somos</h2><p>BaeBae es un servicio de Grupo Sineva Inc. Para cualquier pregunta sobre tus datos escríbenos a support@gruposineva.com o usa «Reportar un problema» en Ajustes → Ayuda.</p></section>
+<section><h2>Qué datos usamos</h2><p>Tu cuenta: correo y contraseña (la contraseña se guarda cifrada; nosotros no la vemos).</p><p>Tu perfil: nombre, nombre de usuario, foto, número de teléfono si lo das, tu idioma y la voz que eliges para la traducción.</p><p>Lo que compartes: mensajes, fotos, videos, notas de voz, documentos, stickers y GIF, encuestas, eventos, recordatorios, historias (duran 24 horas) y tu ubicación solo cuando eliges enviarla.</p><p>Tus llamadas: con quién hablas, cuándo y cuánto duran. El audio y el video van directamente entre los teléfonos, cifrados; cuando la red no lo permite, pasan cifrados por un servidor de relevo (Cloudflare) que no puede verlos ni oírlos.</p><p>Las traducciones de tus mensajes y las frases traducidas de las llamadas, que quedan en el chat como texto.</p><p>Tus créditos de traducción y cómo los usas (minutos y fechas).</p><p>Datos técnicos: el identificador para mandarte avisos (notificaciones) y reportes de errores sin el contenido de tus mensajes.</p></section>
+<section><h2>La traducción con IA (Google)</h2><p>Para traducir, BaeBae manda a Google (modelos Gemini en Google Cloud Vertex AI): tu voz durante las llamadas y en «Hablar en persona» mientras el traductor está encendido; el texto de los mensajes y lo que dicen las notas de voz; y lo que escribes para crear una imagen con IA.</p><p>BaeBae Assistant, el asistente con IA, también usa Gemini: recibe lo que le escribes en su chat y, en los demás chats, solo los mensajes que lo mencionan con @BaeBae o le responden, junto con sus respuestas anteriores; el resto de esas conversaciones no se le envía. Su respuesta queda en ese chat y la ven todas las personas que están en él. Cuando tiene que buscar algo en internet, la pregunta pasa por la Búsqueda de Google.</p><p>Solo lo hacemos después de que nos des permiso en la app, y puedes retirarlo cuando quieras en Ajustes → Privacidad (sin ese permiso la app no puede traducir).</p><p>Google procesa estos datos por encargo nuestro para devolvernos la traducción y no los usa para entrenar sus modelos.</p><p>La traducción automática puede equivocarse. No la uses para decisiones médicas, legales o de emergencia.</p></section>
+<section><h2>Para qué los usamos</h2><p>Para darte el servicio: entregar tus mensajes y llamadas, traducirlos, avisarte, guardar tu historial y tus créditos.</p><p>Para mantener la app segura: revisar reportes, bloquear abusos y corregir errores.</p><p>No vendemos tus datos, no hay publicidad y no te seguimos en otras apps ni webs.</p></section>
+<section><h2>Con quién los compartimos</h2><p>Con las personas con las que hablas: lo que les mandas.</p><p>Con quienes nos ayudan a dar el servicio, solo para eso: Supabase (base de datos, cuentas y archivos), Google Cloud (traducción, voz e imágenes con IA; avisos en Android con Firebase), Apple (avisos en iPhone), Cloudflare (relevo de llamadas), Expo (actualizaciones de la app), GIPHY (cuando buscas un GIF se envía lo que buscas) y OpenStreetMap (los mapas).</p><p>Con las autoridades solo si la ley nos obliga.</p></section>
+<section><h2>Cuánto tiempo los guardamos</h2><p>Tus mensajes y archivos, hasta que los borras o borras tu cuenta. Las historias se borran a las 24 horas.</p><p>Si borras tu cuenta (Ajustes → Cuenta → Eliminar cuenta) borramos tu perfil y tus datos. Los mensajes que ya mandaste pueden seguir en el teléfono de quien los recibió, sin tu nombre.</p><p>Los reportes de seguridad se guardan el tiempo necesario para revisarlos.</p></section>
+<section><h2>Tus derechos</h2><p>Puedes ver y cambiar tu perfil en la app, retirar el permiso de IA, pausar tu cuenta o borrarla desde la app, y pedirnos una copia de tus datos o que corrijamos o borremos algo escribiendo a support@gruposineva.com.</p><p>Si vives en la Unión Europea o en otro lugar con leyes de protección de datos, también puedes reclamar ante tu autoridad de protección de datos.</p></section>
+<section><h2>Edad mínima</h2><p>BaeBae es para personas de 16 años o más. Si sabemos que una cuenta es de alguien menor, la cerramos.</p></section>
+<section><h2>Seguridad</h2><p>Todo viaja cifrado (TLS). Cada persona solo puede leer sus propias conversaciones (reglas de acceso en la base de datos) y los archivos se guardan cifrados.</p></section>
+<section><h2>Cambios</h2><p>Si cambiamos esta política te lo diremos en la app antes de que el cambio cuente. Última actualización: 2026-10-15.</p></section>
+</main>
+
+</body>
+</html>
